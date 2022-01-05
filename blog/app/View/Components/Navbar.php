@@ -12,10 +12,10 @@ class Navbar extends Component
      * @return void
      */
     public $title="";
-    public function __construct($conponentName)
+    public function __construct($componentName)
     {
         //
-        $this->title=$conponentName;
+        $this->title=$componentName;
     }
 
     /**

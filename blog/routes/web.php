@@ -18,9 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about/{name}', function ($name) {
-    return view('about', ["user"=>$name]);
-}); // ---------------------------First Method-------------------------------\\
+// Route::get('/about/{name}', function ($name) {
+//     return view('about', ["user"=>$name]);
+// }); // ---------------------------First Method-------------------------------\\
 
 Route::view('/about', 'about'); //-----------------------Second Method--------------------\\
+
+Route::get('/user', function () {
+    return view('user');
+});
 // Route::get('/controller/{id}', [UserController::class, 'show']);
