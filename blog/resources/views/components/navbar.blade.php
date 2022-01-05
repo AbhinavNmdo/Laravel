@@ -1,3 +1,3 @@
 <div>
-    <h1>Navbar Component</h1>
+    <h1>{{$title}} Navbar Component</h1>
 </div>

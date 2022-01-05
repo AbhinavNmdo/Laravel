@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <x-navbar/>
-    <h2>About {{$user}}</h2>
+    <x-navbar conponentName="Abhinav"/>
+    <h2>About</h2>
 </body>
 </html>
