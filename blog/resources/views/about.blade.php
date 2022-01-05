@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>About</h2>
+    <x-navbar/>
+    <h2>About {{$user}}</h2>
 </body>
 </html>

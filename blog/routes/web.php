@@ -17,7 +17,10 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/controller', [UserController::class, 'show']);
+
+Route::get('/about/{name}', function ($name) {
+    return view('about', ["user"=>$name]);
+}); // ---------------------------First Method-------------------------------\\
+
+Route::view('/about', 'about'); //-----------------------Second Method--------------------\\
+// Route::get('/controller/{id}', [UserController::class, 'show']);
