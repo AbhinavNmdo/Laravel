@@ -8,6 +8,12 @@
 </head>
 <body>
     <x-navbar componentName="Users"/>
-    <h1>User page</h1>
+    @if ($name == "abhay")
+        <h1>This is abhay</h1>
+    @elseif($name == "ashu")
+        <h1>This is ashu</h1>
+    @else
+    <h1>This is unknown</h1>
+    @endif
 </body>
 </html>

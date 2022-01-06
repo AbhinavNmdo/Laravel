@@ -24,7 +24,5 @@ Route::get('/', function () {
 
 Route::view('/about', 'about'); //-----------------------Second Method--------------------\\
 
-Route::get('/user', function () {
-    return view('user');
-});
+Route::get('/user', [UserController::class, 'show']);
 // Route::get('/controller/{id}', [UserController::class, 'show']);

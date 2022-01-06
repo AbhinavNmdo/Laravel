@@ -9,5 +9,6 @@
 <body>
     <h2>Hello World!</h2>
     <a href="/about">about</a>
+    <a href="/user">Users</a>
 </body>
 </html>
