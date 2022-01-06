@@ -23,12 +23,12 @@ Route::get('/', function () {
 // }); // ---------------------------First Method-------------------------------\\
 
 Route::view('/about', 'about'); //-----------------------Second Method--------------------\\
-
+Route::view('/home', 'home')->middleware('protectedPage');
 Route::view('/noaccess', 'noaccess');
 
-Route::group(['middleware' => ['protectedPage']], function(){
-    Route::view('/home', 'home');
-});
+// Route::group(['middleware' => ['protectedPage']], function(){
+//     Route::view('/home', 'home');
+// });
 
 Route::post('/users', [UserController::class, 'getData']);
 Route::view('/login', 'login');
