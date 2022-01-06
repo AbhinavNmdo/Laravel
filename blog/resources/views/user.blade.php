@@ -20,8 +20,10 @@
         <h1>{{$i}}</h1>
     @endfor --}}
 
-    @foreach ($users as $user)
+    {{-- @foreach ($users as $user)
         <h2>{{$user}}</h2>
-    @endforeach
+    @endforeach --}}
+
+    @include('about')
 </body>
 </html>
