@@ -8,12 +8,15 @@
 </head>
 <body>
     <x-navbar componentName="Users"/>
-    @if ($name == "abhay")
+    {{-- @if ($name == "abhay")
         <h1>This is abhay</h1>
     @elseif($name == "ashu")
         <h1>This is ashu</h1>
     @else
     <h1>This is unknown</h1>
-    @endif
+    @endif --}}
+    @for ($i = 0; $i < 10; $i++)
+        <h1>{{$i}}</h1>
+    @endfor
 </body>
 </html>
