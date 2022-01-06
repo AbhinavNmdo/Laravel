@@ -25,12 +25,14 @@ Route::get('/', function () {
 Route::view('/about', 'about'); //-----------------------Second Method--------------------\\
 Route::view('/home', 'home')->middleware('protectedPage');
 Route::view('/noaccess', 'noaccess');
-Route::get('/indexusers', [UserController::class, 'index']);
+// Route::get('/indexusers', [UserController::class, 'index']);
+
+Route::get('/users', [UserController::class, 'getData']);
 
 // Route::group(['middleware' => ['protectedPage']], function(){
 //     Route::view('/home', 'home');
 // });
 
-Route::post('/users', [UserController::class, 'getData']);
+// Route::post('/users', [UserController::class, 'getData']);
 Route::view('/login', 'login');
 // Route::get('/controller/{id}', [UserController::class, 'show']);
