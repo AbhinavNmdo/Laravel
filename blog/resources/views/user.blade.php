@@ -15,8 +15,13 @@
     @else
     <h1>This is unknown</h1>
     @endif --}}
-    @for ($i = 0; $i < 10; $i++)
+
+    {{-- @for ($i = 0; $i < 10; $i++)
         <h1>{{$i}}</h1>
-    @endfor
+    @endfor --}}
+
+    @foreach ($users as $user)
+        <h2>{{$user}}</h2>
+    @endforeach
 </body>
 </html>

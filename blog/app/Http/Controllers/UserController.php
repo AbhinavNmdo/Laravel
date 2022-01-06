@@ -8,6 +8,7 @@ class UserController extends Controller
 {
     //
     function show(){
-        return view('user', ["name"=>"abhay"]);
+        $data=["abhay", "ashu", "papa", "mummy"];
+        return view('user', ["users"=>$data]);
     }
 }
