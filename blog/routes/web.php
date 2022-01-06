@@ -25,6 +25,7 @@ Route::get('/', function () {
 Route::view('/about', 'about'); //-----------------------Second Method--------------------\\
 Route::view('/home', 'home')->middleware('protectedPage');
 Route::view('/noaccess', 'noaccess');
+Route::get('/indexusers', [UserController::class, 'index']);
 
 // Route::group(['middleware' => ['protectedPage']], function(){
 //     Route::view('/home', 'home');
