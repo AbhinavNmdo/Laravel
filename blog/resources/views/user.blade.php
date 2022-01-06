@@ -26,4 +26,8 @@
 
     @include('about')
 </body>
+<script>
+    const data = @json($users);
+    console.log(data);
+</script>
 </html>
