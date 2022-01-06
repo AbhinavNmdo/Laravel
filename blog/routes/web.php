@@ -24,5 +24,6 @@ Route::get('/', function () {
 
 Route::view('/about', 'about'); //-----------------------Second Method--------------------\\
 
-Route::get('/user', [UserController::class, 'show']);
+Route::post('/users', [UserController::class, 'getData']);
+Route::view('/login', 'login');
 // Route::get('/controller/{id}', [UserController::class, 'show']);
