@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Users;
+use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
@@ -22,7 +23,12 @@ class UserController extends Controller
     //     return DB::select("select * from users");
     // }
 
-    function getData(){
-        return Users::all();
+    // function getData(){
+    //     return Users::all();
+    // }
+
+    function getDataApi(){
+        $data = Http::get('https://investingdelta.herokuapp.com/api/review');
+        return view('user', ["collection"=> $data]);
     }
 }

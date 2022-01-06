@@ -7,7 +7,7 @@
     <title>User</title>
 </head>
 <body>
-    <x-navbar componentName="Users"/>
+    {{-- <x-navbar componentName="Users"/> --}}
     {{-- @if ($name == "abhay")
         <h1>This is abhay</h1>
     @elseif($name == "ashu")
@@ -24,10 +24,12 @@
         <h2>{{$user}}</h2>
     @endforeach --}}
 
-    @include('about')
+    {{-- @include('about') --}}
+
+    <h5>{{$collection}}</h5>
 </body>
-<script>
-    const data = @json($users);
-    console.log(data);
-</script>
+{{-- <script>
+    // const data = @json($users);
+    // console.log(data);
+</script> --}}
 </html>
