@@ -27,8 +27,14 @@ class UserController extends Controller
     //     return Users::all();
     // }
 
-    function getDataApi(){
-        $data = Http::get('https://investingdelta.herokuapp.com/api/review');
-        return view('user', ["collection"=> $data['review']]);
+    // function getDataApi(){
+    //     $data = Http::get('https://investingdelta.herokuapp.com/api/review');
+    //     return view('user', ["collection"=> $data['review']]);
+    // }
+
+    function fakeLogin(Request $req){
+        $data = $req->input('username');
+        $req->session()->put('user', $data);
+        return redirect('users');
     }
 }

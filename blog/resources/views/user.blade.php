@@ -30,13 +30,17 @@
         <h4>{{$item['firstname']}}</h4>
     @endforeach --}}
 
-    <form action="user" method="POST">
+    {{-- <form action="user" method="POST">
         @csrf
-        {{method_field('DELETE')}} {{-- We can pass any request using this method --}}
+        {{method_field('DELETE')}} {{-- We can pass any request using this method 
         <input type="text" name="username" placeholder="Enter Username">
         <input type="password" name="password" placeholder="Enter Password">
         <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
+    </form> --}}
+
+    <h1>Profile</h1>
+    <h3>Hello, {{session('user')}}</h3>
+    <a href="/logout">Logout</a>
 </body>
 {{-- <script>
     // const data = @json($users);
