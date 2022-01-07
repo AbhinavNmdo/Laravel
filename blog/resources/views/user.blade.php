@@ -26,7 +26,9 @@
 
     {{-- @include('about') --}}
 
-    <h5>{{$collection}}</h5>
+    @foreach ($collection as $item)
+        <h4>{{$item['firstname']}}</h4>
+    @endforeach
 </body>
 {{-- <script>
     // const data = @json($users);

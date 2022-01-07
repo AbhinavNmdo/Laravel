@@ -29,6 +29,6 @@ class UserController extends Controller
 
     function getDataApi(){
         $data = Http::get('https://investingdelta.herokuapp.com/api/review');
-        return view('user', ["collection"=> $data]);
+        return view('user', ["collection"=> $data['review']]);
     }
 }
