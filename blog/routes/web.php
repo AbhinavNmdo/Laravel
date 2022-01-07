@@ -23,13 +23,24 @@ Route::get('/', function () {
 // }); // ---------------------------First Method-------------------------------\\
 
 Route::view('/about', 'about'); //-----------------------Second Method--------------------\\
+
+// ! Restrict Page System
 Route::view('/home', 'home')->middleware('protectedPage');
 Route::view('/noaccess', 'noaccess');
+// Route::group(['middleware' => ['protectedPage']], function(){
+//     Route::view('/home', 'home');
+// });
+
+// ! Connection with Database
 // Route::get('/indexusers', [UserController::class, 'index']);
 
+// ! Fetching data with API
 // Route::get('/users', [UserController::class, 'getDataApi']);
 
-// Fake Login system
+// ! Get data from user input
+// Route::post('/users', [UserController::class, 'getData']);
+
+// ! Fake Login system
 Route::post('/users', [UserController::class, 'fakeLogin']);
 Route::get('/users', function(){
     return view('user');
@@ -49,10 +60,8 @@ Route::get('/logout', function(){
     return redirect('login');
 });
 
-// Route::group(['middleware' => ['protectedPage']], function(){
-//     Route::view('/home', 'home');
-// });
 
-// Route::post('/users', [UserController::class, 'getData']);
+
+
 
 // Route::get('/controller/{id}', [UserController::class, 'show']);
